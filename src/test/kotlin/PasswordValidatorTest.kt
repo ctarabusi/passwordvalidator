@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test
 import kotlin.test.assertFalse
+import kotlin.test.assertTrue
 
 internal class PasswordValidatorTest {
 
@@ -7,10 +8,15 @@ internal class PasswordValidatorTest {
 
     @Test
     fun testMinLength() {
-
-
         val shortPassword = "abc"
         assertFalse(validator.validate(shortPassword))
+    }
+
+
+    @Test
+    fun testDoesntContainsCapitalLetter() {
+        val passwordWithCapital = "abcdefghijk"
+        assertFalse(validator.validate(passwordWithCapital))
     }
 
 }
