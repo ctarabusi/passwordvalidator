@@ -4,22 +4,22 @@ import kotlin.test.assertTrue
 
 internal class PasswordValidatorTest {
 
-    val validator = PasswordValidator()
+    private val validator = PasswordValidator()
 
     @Test
-    fun testMinLength() {
+    fun hasMinLength() {
         val shortPassword = "abc"
         assertFalse(validator.validate(shortPassword))
     }
 
     @Test
-    fun testDoesntContainsCapitalLetter() {
+    fun doesNotContainCapitalLetter() {
         val passwordWithCapital = "abcdefghijk"
         assertFalse(validator.validate(passwordWithCapital))
     }
 
     @Test
-    fun testDoesntContainLowercaseLetter() {
+    fun doesNotContainLowercaseLetter() {
         val example = "AAAAAAAAAA"
         assertFalse(validator.validate(example))
     }
