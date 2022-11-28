@@ -12,11 +12,16 @@ internal class PasswordValidatorTest {
         assertFalse(validator.validate(shortPassword))
     }
 
-
     @Test
     fun testDoesntContainsCapitalLetter() {
         val passwordWithCapital = "abcdefghijk"
         assertFalse(validator.validate(passwordWithCapital))
+    }
+
+    @Test
+    fun testDoesntContainLowercaseLetter() {
+        val example = "AAAAAAAAAA"
+        assertFalse(validator.validate(example))
     }
 
 }
