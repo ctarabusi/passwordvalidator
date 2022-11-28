@@ -6,6 +6,7 @@ class PasswordValidator {
                 && enteredPassword.any { it.isUpperCase() }
                 && enteredPassword.any { it.isLowerCase() }
                 && enteredPassword.any { it.isDigit() }
+                && enteredPassword.contains("_")
     }
 
     companion object {
