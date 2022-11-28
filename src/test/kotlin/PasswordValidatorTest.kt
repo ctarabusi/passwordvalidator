@@ -3,6 +3,7 @@ import kotlin.test.assertFalse
 
 internal class PasswordValidatorTest {
 
+
     @Test
     fun testMinLength() {
         val validator = PasswordValidator()
@@ -10,4 +11,5 @@ internal class PasswordValidatorTest {
         val shortPassword = "abc"
         assertFalse(validator.validate(shortPassword))
     }
+
 }
