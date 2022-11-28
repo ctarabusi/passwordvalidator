@@ -1,6 +1,5 @@
 import org.junit.jupiter.api.Test
 import kotlin.test.assertFalse
-import kotlin.test.assertTrue
 
 internal class PasswordValidatorTest {
 
@@ -25,7 +24,7 @@ internal class PasswordValidatorTest {
     }
 
     @Test
-    fun testDoesntContainsNumber() {
+    fun doesNotContainDigit() {
         val passwordWithoutNumber = "abcdeFGhijk"
         assertFalse(validator.validate(passwordWithoutNumber))
     }
