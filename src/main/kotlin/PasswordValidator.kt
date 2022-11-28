@@ -5,6 +5,7 @@ class PasswordValidator {
         return enteredPassword.length > MIN_PASSWORD_LENGTH
                 && enteredPassword.any { it.isUpperCase() }
                 && enteredPassword.any { it.isLowerCase() }
+                && enteredPassword.any { it.isDigit() }
     }
 
     companion object {

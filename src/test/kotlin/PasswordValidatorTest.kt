@@ -24,4 +24,10 @@ internal class PasswordValidatorTest {
         assertFalse(validator.validate(example))
     }
 
+    @Test
+    fun testDoesntContainsNumber() {
+        val passwordWithoutNumber = "abcdeFGhijk"
+        assertFalse(validator.validate(passwordWithoutNumber))
+    }
+
 }
